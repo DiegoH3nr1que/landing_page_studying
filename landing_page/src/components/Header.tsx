@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "@/assets/logo.svg";
 import Image from "next/image";
 import ItemMenu from "./ItemMenu";
+import Search from "./Search";
 
 export default function Header() {
   return (
@@ -10,20 +11,23 @@ export default function Header() {
         <div>
           <div className=" flex items-center gap-14">
             <Image src={Logo} alt="Logo" />
-            <ul className="flex  items-center gap-12">
+            <ul className="flex items-center gap-12">
               <li>
-              <ItemMenu name="Para você"/>
+                <ItemMenu name="Para você" />
               </li>
               <li>
-              <ItemMenu name="Para empresas"/>
+                <ItemMenu name="Para empresas" />
               </li>
               <li>
-              <ItemMenu name="Serviços"/>
+                <ItemMenu name="Serviços" />
               </li>
               <li>
-              <ItemMenu name="Ajuda"/>
+                <ItemMenu name="Ajuda" />
               </li>
             </ul>
+          </div>
+          <div>
+            <Search />
           </div>
         </div>
       </div>
