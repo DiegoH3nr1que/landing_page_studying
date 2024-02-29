@@ -4,11 +4,12 @@ import Image from "next/image";
 import ItemMenu from "./ItemMenu";
 import Search from "./Search";
 import IconUser from "@/assets/icon-user.svg";
+import Container from "./Container";
 
 export default function Header() {
   return (
     <header className=" relative flex items-center w-full h-20 bg-primary-orange">
-      <div className=" flex items-center justify-between w-full max-w-[1246px] pl-[2%] mx-auto">
+      <Container>
         <div className=" flex flex-1 items-center justify-between">
           <div className=" flex items-center gap-20">
             <Image src={Logo} alt="Logo" />
@@ -29,11 +30,11 @@ export default function Header() {
             <Search />
           </div>
         </div>
-        <button className="flex w-[20%] justify-center items-center gap-4 bg-primary-blue h-20 pl-10">
+        <button className="flex w-[20%] justify-center items-center gap-4 bg-primary-blue h-20 pl-3">
           <Image src={IconUser} alt="User" />
           <span className="text-white font-bold">Acessar conta</span>
         </button>
-      </div>
+      </Container>
     </header>
   );
 }
